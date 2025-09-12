@@ -33,10 +33,10 @@ const Clubs = () => {
   async function fetchClubs() {
     showLoading();
     try {
-      // const response = await fetch(`${baseUrl}get_all_live_updates`);
-      // if (!response.ok) throw new Error("Failed to fetch clubs");
-      // const data = await response.json();
-      // setClubData(data?.live_updates);
+      const response = await fetch(`${baseUrl}get_all_live_updates`);
+      if (!response.ok) throw new Error("Failed to fetch clubs");
+      const data = await response.json();
+      setClubData(data?.live_updates);
     } catch (error) {
       console.error("Error fetching clubs:", error);
       setClubData([]);
