@@ -7,15 +7,6 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useLoading } from "@/contexts/LoadingContext";
 import { RegistrationDialog } from "@/components/RegistrationDialog";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuLabel,
-  DropdownMenuRadioGroup,
-  DropdownMenuRadioItem,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 import { ChevronDown, Search, MapPin, Filter, DollarSign, X, SlidersHorizontal } from "lucide-react";
 import { Slider } from "@/components/ui/slider";
 import { baseUrl } from "@/config";
@@ -42,10 +33,10 @@ const Clubs = () => {
   async function fetchClubs() {
     showLoading();
     try {
-      const response = await fetch(`${baseUrl}get_all_live_updates`);
-      if (!response.ok) throw new Error("Failed to fetch clubs");
-      const data = await response.json();
-      setClubData(data?.live_updates);
+      // const response = await fetch(`${baseUrl}get_all_live_updates`);
+      // if (!response.ok) throw new Error("Failed to fetch clubs");
+      // const data = await response.json();
+      // setClubData(data?.live_updates);
     } catch (error) {
       console.error("Error fetching clubs:", error);
       setClubData([]);

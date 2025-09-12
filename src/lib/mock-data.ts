@@ -647,6 +647,85 @@ export const clubs: Club[] = [
       ],
     },
   },
+  {
+    id: "Poker-syndicate-legal-poker-room",
+    name: "Poker Syndicate - Legal Poker Room",
+    location: {
+      area: "Koramangala",
+      city: "Bangalore",
+      address: "1st Floor, ASV Towers, No.590, Sarjapur - Marathahalli Rd, 3rd Block, Santhosapuram, Koramangala 3 Block, Koramangala, Bengaluru, Karnataka 560034",
+      coordinates: {
+        lat: 12.927651082290042,
+        lng: 77.62178323936357,
+      },
+    },
+    description: "Poker Syndicate - Legal Poker Room is a premier 24/7 poker destination in Koramangala offering professional gaming tables and excellent service in a sophisticated environment.",
+    images: [
+      "/images/poker_syndicate_room.jpg",
+      "/images/poker_syndicate.jpg",
+      "/images/poker_syndicate_card.jpg",
+    ],
+    stakes: [
+      {
+        name: "Regular Tables",
+        smallBlind: 100,
+        bigBlind: 200,
+        minBuyIn: 10000,
+        maxBuyIn: 40000,
+        currency: "₹",
+      },
+      {
+        name: "High Stakes",
+        smallBlind: 500,
+        bigBlind: 1000,
+        minBuyIn: 50000,
+        maxBuyIn: 200000,
+        currency: "₹",
+      },
+    ],
+    contactInfo: {
+      phone: "080 4194 7385",
+      email: "info@kingsandqueenspoker.com",
+      website: "https://www.kingsandqueenspoker.com",
+    },
+    operatingHours: [
+      { day: "Monday", open: "00:00", close: "23:59" },
+      { day: "Tuesday", open: "00:00", close: "23:59" },
+      { day: "Wednesday", open: "00:00", close: "23:59" },
+      { day: "Thursday", open: "00:00", close: "23:59" },
+      { day: "Friday", open: "00:00", close: "23:59" },
+      { day: "Saturday", open: "00:00", close: "23:59" },
+      { day: "Sunday", open: "00:00", close: "23:59" },
+    ],
+    amenities: [
+      "Professional dealers",
+      "Premium bar",
+      "Restaurant",
+      "Valet parking",
+      "Security",
+      "VIP rooms",
+    ],
+    liveStatus: {
+      lastUpdated: new Date().toISOString(),
+      tablesRunning: 5,
+      totalPlayers: 40,
+      waitingList: 2,
+      expectedWaitTime: 15,
+      nextCallTime: "20:00",
+      games: [
+        {
+          stakeId: "Regular Tables",
+          tablesRunning: 3,
+          players: 24,
+        },
+        {
+          stakeId: "High Stakes",
+          tablesRunning: 2,
+          players: 16,
+        },
+      ],
+    },
+  },
 ];
 
 export const getClubById = (id: string): Club | undefined => {

@@ -37,11 +37,7 @@ interface RegistrationDialogProps {
   onSuccess: () => void;
 }
 
-export function RegistrationDialog({
-                                     isOpen,
-                                     onClose,
-                                     onSuccess,
-                                   }: RegistrationDialogProps) {
+export function RegistrationDialog({ isOpen, onClose, onSuccess,}: RegistrationDialogProps) {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
