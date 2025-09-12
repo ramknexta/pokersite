@@ -655,8 +655,8 @@ export const clubs: Club[] = [
       city: "Bangalore",
       address: "1st Floor, ASV Towers, No.590, Sarjapur - Marathahalli Rd, 3rd Block, Santhosapuram, Koramangala 3 Block, Koramangala, Bengaluru, Karnataka 560034",
       coordinates: {
-        lat: 12.927651082290042,
-        lng: 77.62178323936357,
+        lat: 12.927662,
+        lng: 77.622352,
       },
     },
     description: "Poker Syndicate - Legal Poker Room is a premier 24/7 poker destination in Koramangala offering professional gaming tables and excellent service in a sophisticated environment.",
@@ -684,9 +684,9 @@ export const clubs: Club[] = [
       },
     ],
     contactInfo: {
-      phone: "080 4194 7385",
-      email: "info@kingsandqueenspoker.com",
-      website: "https://www.kingsandqueenspoker.com",
+      phone: "",
+      email: "",
+      website: "https://pokersyndicate.co",
     },
     operatingHours: [
       { day: "Monday", open: "00:00", close: "23:59" },

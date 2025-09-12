@@ -1,5 +1,7 @@
 export function getGoogleMapsEmbedUrl(clubName: string): string | undefined {
   const name = clubName.toLowerCase();
+
+
   if (name.includes("royal flush poker")) {
     return "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.0000000000005!2d77.59996687572318!3d12.9690117235815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae167f4ca86653%3A0x7427ceed0c91991!2sKonark%20Vegetarian%20Restaurant!5e1!3m2!1sen!2sin!4v1746776615611!5m2!1sen!2sin";
   }
@@ -23,6 +25,9 @@ export function getGoogleMapsEmbedUrl(clubName: string): string | undefined {
   }
   if (name.includes("kings and queens poker")) {
     return "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.576416757495!2d77.62951919999999!3d12.9349239!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae145d4b409923%3A0x921634fee1dcd997!2sKings%20And%20Queens%20Poker%20-%20(Bangalore%20Poker%20Sports)!5e0!3m2!1sen!2sin!4v1752818825706!5m2!1sen!2sin";
+  }
+  if (name.includes("poker syndicate - legal poker room")) {
+    return "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.693171273458!2d77.6217296!3d12.9274315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15022365153d%3A0xc1c8d0d786f160b!2sPoker%20Syndicate%20-%20Legal%20Poker%20Room!5e0!3m2!1sen!2sin!4v1757680357736!5m2!1sen!2sin";
   }
   return undefined;
 } 
