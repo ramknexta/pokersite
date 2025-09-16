@@ -52,19 +52,19 @@ const Admin = () => {
 
     try {
       showLoading();
-      let res = await fetch(`${baseUrl}login`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ user_id: clubId, password: password }),
-      });
-      if (!res.ok) {
-        throw new Error("Network response was not ok");
-      }
-      let data = await res.json();
-      localStorage.setItem("redirect_url", data.redirect_url);
-      if (res.status == 200) navigate(`/club/${data.redirect_url}?tab=admin`);
+      // let res = await fetch(`${baseUrl}login`, {
+      //   method: "POST",
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //   },
+      //   body: JSON.stringify({ user_id: clubId, password: password }),
+      // });
+      // if (!res.ok) {
+      //   throw new Error("Network response was not ok");
+      // }
+      // let data = await res.json();
+      // localStorage.setItem("redirect_url", data.redirect_url);
+      // if (res.status == 200) navigate(`/club/${data.redirect_url}?tab=admin`);
     } finally {
       hideLoading();
     }

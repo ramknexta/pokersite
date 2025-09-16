@@ -28,12 +28,12 @@ export function LiveStatus({ club, className }: LiveStatusProps) {
     const clubSlugMatch = window.location.pathname.match(/\/club\/([^/?]+)/);
     const clubSlug = clubSlugMatch ? clubSlugMatch[1] : "";
     try {
-      const response = await fetch(`${baseUrl}get_live_update/${clubSlug}`, {
-        method: "GET",
-      });
-      if (!response.ok) throw new Error("Failed to fetch live status");
-      const data = await response.json();
-      setClubData(data);
+      // const response = await fetch(`${baseUrl}get_live_update/${clubSlug}`, {
+      //   method: "GET",
+      // });
+      // if (!response.ok) throw new Error("Failed to fetch live status");
+      // const data = await response.json();
+      // setClubData(data);
     } catch (error) {
       console.error("Error fetching live status:", error);
     }

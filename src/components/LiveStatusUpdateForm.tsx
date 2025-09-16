@@ -66,18 +66,18 @@ export function LiveStatusUpdateForm({
     }
 
     try {
-      const response = await fetch(`${baseUrl}update_offer`, {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem("clubToken") || ""}`,
-        },
-        body: formData,
-      });
-
-      const result = await response.json();
-      if (!response.ok) {
-        throw new Error(result.message || "Something went wrong");
-      }
+      // const response = await fetch(`${baseUrl}update_offer`, {
+      //   method: "POST",
+      //   headers: {
+      //     Authorization: `Bearer ${localStorage.getItem("clubToken") || ""}`,
+      //   },
+      //   body: formData,
+      // });
+      //
+      // const result = await response.json();
+      // if (!response.ok) {
+      //   throw new Error(result.message || "Something went wrong");
+      // }
     } catch (err) {
       console.error("Error:", err.message);
     }
@@ -88,23 +88,23 @@ export function LiveStatusUpdateForm({
     const clubSlugMatch = window.location.pathname.match(/\/club\/([^/?]+)/);
     const clubSlug = clubSlugMatch ? clubSlugMatch[1] : "";
     try {
-      let res = await fetch(`${baseUrl}login`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ redirect_url: clubSlug, password: password }),
-      });
-
-      let data = await res.json();
-      if (res.status === 200) {
-        toast({
-          title: "Authentication successful",
-          description: "You can now update the club's live status",
-        });
-        localStorage.setItem("clubToken", data.token);
-        setIsAuthenticated(true);
-      }
+      // let res = await fetch(`${baseUrl}login`, {
+      //   method: "POST",
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //   },
+      //   body: JSON.stringify({ redirect_url: clubSlug, password: password }),
+      // });
+      //
+      // let data = await res.json();
+      // if (res.status === 200) {
+      //   toast({
+      //     title: "Authentication successful",
+      //     description: "You can now update the club's live status",
+      //   });
+      //   localStorage.setItem("clubToken", data.token);
+      //   setIsAuthenticated(true);
+      // }
     } catch (error) {}
   };
 
@@ -118,29 +118,29 @@ export function LiveStatusUpdateForm({
 
     try {
       const token = localStorage.getItem("clubToken");
-      const res = await fetch(`${baseUrl}update_live_update`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: token ? `Bearer ${token}` : "",
-        },
-        body: JSON.stringify({ live_update: newStatus }),
-      });
-
-      if (res.ok) {
-        onStatusUpdated(newStatus);
-        toast({
-          title: "Status updated successfully",
-          description: "The club's live status has been updated.",
-        });
-      } else {
-        const data = await res.json();
-        toast({
-          title: "Update failed",
-          description: data?.message || "Failed to update live status.",
-          variant: "destructive",
-        });
-      }
+      // const res = await fetch(`${baseUrl}update_live_update`, {
+      //   method: "POST",
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //     Authorization: token ? `Bearer ${token}` : "",
+      //   },
+      //   body: JSON.stringify({ live_update: newStatus }),
+      // });
+      //
+      // if (res.ok) {
+      //   onStatusUpdated(newStatus);
+      //   toast({
+      //     title: "Status updated successfully",
+      //     description: "The club's live status has been updated.",
+      //   });
+      // } else {
+      //   const data = await res.json();
+      //   toast({
+      //     title: "Update failed",
+      //     description: data?.message || "Failed to update live status.",
+      //     variant: "destructive",
+      //   });
+      // }
     } catch (error) {
       toast({
         title: "Update failed",

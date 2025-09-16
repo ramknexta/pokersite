@@ -14,17 +14,17 @@ const OfferComp = () => {
 
   async function fetchOffers() {
     try {
-      let res = await fetch(
-        `${baseUrl}/get_offer/${window.location.pathname.split("/")[2]}`
-      );
-      const data = await res.json();
-
-      setOfferData(data);
-      if (data?.no_offers == false) {
-        setOfferVisible(true);
-      } else {
-        setOfferVisible(false);
-      }
+      // let res = await fetch(
+      //   `${baseUrl}/get_offer/${window.location.pathname.split("/")[2]}`
+      // );
+      // const data = await res.json();
+      //
+      // setOfferData(data);
+      // if (data?.no_offers == false) {
+      //   setOfferVisible(true);
+      // } else {
+      //   setOfferVisible(false);
+      // }
     } catch (error) {
       // Optionally handle error here
       setOfferVisible(false);
@@ -60,13 +60,13 @@ const OfferComp = () => {
                   ✨ Special Offer ✨
                 </h2>
 
-                {offerData.image_url && (
-                  <img
-                    src={`${baseUrl}${offerData.image_url}`}
-                    alt="Offer"
-                    className="w-full h-auto rounded-xl mb-4 shadow-md hover:scale-105 transition-transform duration-300"
-                  />
-                )}
+                {/*{offerData.image_url && (*/}
+                {/*  <img*/}
+                {/*    src={`${baseUrl}${offerData.image_url}`}*/}
+                {/*    alt="Offer"*/}
+                {/*    className="w-full h-auto rounded-xl mb-4 shadow-md hover:scale-105 transition-transform duration-300"*/}
+                {/*  />*/}
+                {/*)}*/}
 
                 <p className="text-gray-800 mb-4 text-center text-lg font-bold">
                   {offerData.no_offers
